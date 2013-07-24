@@ -164,10 +164,11 @@
                 'background-color': settings.foot_bgcolor
             });
             
-            if ($.browser.webkit) // https://bugs.webkit.org/show_bug.cgi?id=48975
+            try {
                 setTimeout(function(){$("<style></style>").appendTo("head").remove();}, 0);
-            if ($.browser.msie) // IE add scrollbar inside block [IE8]
+            catch(e) {
                 inner.css({ 'padding-right': 16 });
+            }
 
         });
 
