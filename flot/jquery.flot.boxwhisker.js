@@ -79,11 +79,13 @@
         }
         
         var col = series.color;
-        var lineCol = series.lineColor;
+        var lineCol = "#000000";
+        if(series.lineColor) {
+	    lineCol = series.lineColor;
+	}
         if (!series.boxwhisker.useColor)
         {
 	    col = "#FFFFFF";
-            lineCol = "#000000";
         }
         ctx.lineWidth = series.lineWidth;
         drawBoxWhisker(lineCol, col, s_x, s_w, s_min, s_lq, s_med, s_uq, s_max);
