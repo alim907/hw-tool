@@ -78,13 +78,15 @@
             ctx.stroke();
         }
         
-       var col = series.color;
+        var col = series.color;
+        var lineCol = series.lineColor;
         if (!series.boxwhisker.useColor)
         {
 	    col = "#FFFFFF";
+            lineCol = "#000000";
         }
         ctx.lineWidth = series.lineWidth;
-        drawBoxWhisker("rgba(0,0,0,1)", col, s_x, s_w, s_min, s_lq, s_med, s_uq, s_max);
+        drawBoxWhisker(lineCol, col, s_x, s_w, s_min, s_lq, s_med, s_uq, s_max);
 
         ctx.restore();
     }
