@@ -1,0 +1,8 @@
+textarea{margin-top: .5em}
+.displayText {
+  border: 1px solid black;
+  width: auto;
+  position: absolute; top: 10;
+  min-width: 20em;
+}
+.displayBox {position: absolute; top:50 left: 50;}
